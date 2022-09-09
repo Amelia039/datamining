@@ -431,6 +431,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 
 <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/Amelia039/my-dataset/main/diabetes.csv&quot;</span>
 
@@ -460,7 +461,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e08c5406-990c-40b6-bcd9-82893d8f3400">
+  <div id="df-9dcecb8b-3329-407b-a073-a48e17006486">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -628,7 +629,7 @@ title="Print to PDF"
 </table>
 <p>768 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e08c5406-990c-40b6-bcd9-82893d8f3400')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9dcecb8b-3329-407b-a073-a48e17006486')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -679,12 +680,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e08c5406-990c-40b6-bcd9-82893d8f3400 button.colab-df-convert');
+          document.querySelector('#df-9dcecb8b-3329-407b-a073-a48e17006486 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e08c5406-990c-40b6-bcd9-82893d8f3400');
+          const element = document.querySelector('#df-9dcecb8b-3329-407b-a073-a48e17006486');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -714,7 +715,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-889110a6-54b3-431c-8ce8-0bcda1c2f69c">
+  <div id="df-f6b85525-6655-4dcf-a5c9-7bc7ea57da13">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -809,7 +810,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-889110a6-54b3-431c-8ce8-0bcda1c2f69c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f6b85525-6655-4dcf-a5c9-7bc7ea57da13')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -860,12 +861,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-889110a6-54b3-431c-8ce8-0bcda1c2f69c button.colab-df-convert');
+          document.querySelector('#df-f6b85525-6655-4dcf-a5c9-7bc7ea57da13 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-889110a6-54b3-431c-8ce8-0bcda1c2f69c');
+          const element = document.querySelector('#df-f6b85525-6655-4dcf-a5c9-7bc7ea57da13');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -895,7 +896,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-267d9f51-ff2d-418e-817f-2525ed095f9f">
+  <div id="df-0b60a010-0abc-4a7c-9087-4b4b80961fcc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -990,7 +991,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-267d9f51-ff2d-418e-817f-2525ed095f9f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0b60a010-0abc-4a7c-9087-4b4b80961fcc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1041,12 +1042,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-267d9f51-ff2d-418e-817f-2525ed095f9f button.colab-df-convert');
+          document.querySelector('#df-0b60a010-0abc-4a7c-9087-4b4b80961fcc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-267d9f51-ff2d-418e-817f-2525ed095f9f');
+          const element = document.querySelector('#df-0b60a010-0abc-4a7c-9087-4b4b80961fcc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1119,7 +1120,7 @@ memory usage: 54.1 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-96625a99-c900-42f4-883a-36e82027b6f8">
+  <div id="df-cc8c93bb-53d7-4263-9211-240e84356637">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1250,7 +1251,7 @@ memory usage: 54.1 KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-96625a99-c900-42f4-883a-36e82027b6f8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cc8c93bb-53d7-4263-9211-240e84356637')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1301,12 +1302,12 @@ memory usage: 54.1 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-96625a99-c900-42f4-883a-36e82027b6f8 button.colab-df-convert');
+          document.querySelector('#df-cc8c93bb-53d7-4263-9211-240e84356637 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-96625a99-c900-42f4-883a-36e82027b6f8');
+          const element = document.querySelector('#df-cc8c93bb-53d7-4263-9211-240e84356637');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1327,31 +1328,180 @@ memory usage: 54.1 KB
   </div>
 </div></div>
 </div>
+<p><strong>Rumus Mean</strong></p>
+<p>Dalam statistika dan matematika, mean disebut juga dengan rata-rata. Jadi, definisi mean adalah nilai rata-rata dari sekumpulan data yang terdiri dari dua atau lebih..
+Berikut rumus mean untuk data tunggal:
+$<span class="math notranslate nohighlight">\(\bar{x}=\frac{\sum x_i}{n}
+\)</span>$
+Keterangan:</p>
+<p><span class="math notranslate nohighlight">\(\bar{x}:\)</span> nilai rata-rata</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{x}_{\mathrm{i}}\)</span> : nilai data ke-i</p>
+<p>n : banyaknya data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Count</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">med</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
-		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
-    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
-    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
-    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
     <span class="p">}</span>
 
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">med</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;median&#39;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">])</span>
 <span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-758763cc-37d4-432c-9893-56fdf033fc17">
+  <div id="df-c714a37e-5f68-4471-ac56-effef4eb2742">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mean</th>
+      <td>3.845052</td>
+      <td>120.894531</td>
+      <td>69.105469</td>
+      <td>20.536458</td>
+      <td>79.799479</td>
+      <td>31.992578</td>
+      <td>0.471876</td>
+      <td>33.240885</td>
+      <td>0.348958</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c714a37e-5f68-4471-ac56-effef4eb2742')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-c714a37e-5f68-4471-ac56-effef4eb2742 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-c714a37e-5f68-4471-ac56-effef4eb2742');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Rumus Median</strong></p>
+<p>Median disebut juga dengan nilai tengah. Median diperoleh dengan cara mengambil nilai tengah pada data yang telah disusun secara berurutan dari angka terkecil ke terbesar.
+Pada data tunggal untuk menentukan median yaitu:
+Misalkan banyaknya data n,</p>
+<p>Untuk <span class="math notranslate nohighlight">\(n\)</span> ganjil: <span class="math notranslate nohighlight">\(M e=x_{\frac{1}{2}(n+1)}\)</span></p>
+<p>Untuk <span class="math notranslate nohighlight">\(n\)</span> genap: <span class="math notranslate nohighlight">\(M e=\frac{\frac{x_n}{2}+\frac{x_n}{2}+1}{2}\)</span></p>
+<p>Keterangan:
+<span class="math notranslate nohighlight">\(x_{\frac{n}{2}}=\)</span> data pada urutan ke- <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span> setelah diurutkan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">median</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;median&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-a5ff6c84-fce7-4f52-bccd-ade9875eecee">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1398,7 +1548,7 @@ memory usage: 54.1 KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-758763cc-37d4-432c-9893-56fdf033fc17')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a5ff6c84-fce7-4f52-bccd-ade9875eecee')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1449,12 +1599,919 @@ memory usage: 54.1 KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-758763cc-37d4-432c-9893-56fdf033fc17 button.colab-df-convert');
+          document.querySelector('#df-a5ff6c84-fce7-4f52-bccd-ade9875eecee button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-758763cc-37d4-432c-9893-56fdf033fc17');
+          const element = document.querySelector('#df-a5ff6c84-fce7-4f52-bccd-ade9875eecee');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Modus</strong></p>
+<p>Modus adalah nilai data yang paling sering muncul atau nilai data yang frekuensinya paling besar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modus</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span> <span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">modus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Pregnancies&#39;: ModeResult(mode=array([1]), count=array([135])),
+ &#39;Glucose&#39;: ModeResult(mode=array([99]), count=array([17])),
+ &#39;BloodPressure&#39;: ModeResult(mode=array([70]), count=array([57])),
+ &#39;SkinThickness&#39;: ModeResult(mode=array([0]), count=array([227])),
+ &#39;Insulin&#39;: ModeResult(mode=array([0]), count=array([374])),
+ &#39;BMI&#39;: ModeResult(mode=array([32.]), count=array([13])),
+ &#39;DiabetesPedigreeFunction&#39;: ModeResult(mode=array([0.254]), count=array([6])),
+ &#39;Age&#39;: ModeResult(mode=array([22]), count=array([72])),
+ &#39;Outcome&#39;: ModeResult(mode=array([0]), count=array([500]))}
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rumus Standar Deviasi</strong></p>
+<p>Standar deviasi atau simpangan baku biasanya diajarkan pada ilmu statistik untuk mengukur tingkat kesamaan atau kedekatan dalam suatu kelompok.</p>
+<p>Standar deviasi adalah nilai statistik yang sering kali dipakai dalam menentukan kedekatan sebaran data yang ada di dalam sampel dan seberapa dekat titik data individu dengan mean atau rata-rata nilai dari sampel itu sendiri.</p>
+<p>Untuk Data Tunggal :
+<span class="math notranslate nohighlight">\(S=\sqrt{\frac{\sum\left(x_i-\bar{x}\right)^2}{n}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(S=\)</span> Standar deviasi</p>
+<p><span class="math notranslate nohighlight">\(x_i=\)</span> nilai <span class="math notranslate nohighlight">\(\mathrm{x} \mathrm {ke-i}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\bar{x}=\)</span> nilai rata-rata data</p>
+<p><span class="math notranslate nohighlight">\(n=\)</span> jumlah data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">std</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d8fd8224-5fd9-4dc4-8125-ab43b7634b3c">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>std</th>
+      <td>3.369578</td>
+      <td>31.972618</td>
+      <td>19.355807</td>
+      <td>15.952218</td>
+      <td>115.244002</td>
+      <td>7.88416</td>
+      <td>0.331329</td>
+      <td>11.760232</td>
+      <td>0.476951</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d8fd8224-5fd9-4dc4-8125-ab43b7634b3c')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-d8fd8224-5fd9-4dc4-8125-ab43b7634b3c button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-d8fd8224-5fd9-4dc4-8125-ab43b7634b3c');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Nilai Minimum</strong></p>
+<p>Dilakukan dengan mengurutkan semua data dari yang terkecil ke terbesar,
+Kemudian diambil nilai yang terkecil</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ba0553c6-0ac2-4954-9ca4-0a2cbb7cca28">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>min</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.078</td>
+      <td>21</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ba0553c6-0ac2-4954-9ca4-0a2cbb7cca28')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ba0553c6-0ac2-4954-9ca4-0a2cbb7cca28 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ba0553c6-0ac2-4954-9ca4-0a2cbb7cca28');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>RUMUS PERSENTIL DATA TUNGGAL
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{i(n+1)}{100}
+\)</span>$</p>
+<p>Jika persentil 25% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{25(n+1)}{100}
+\)</span>$</p>
+<p>Jika persentil 50% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{50(n+1)}{100}
+\)</span>$</p>
+<p>Jika persentil 75% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{75(n+1)}{100}
+\)</span>$</p>
+<p>Keterangan:</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{P}=\)</span> persentil ke <span class="math notranslate nohighlight">\(-\mathrm{i}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+i=1,2,3, \ldots, 99
+\]</div>
+<p>n = banyak data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile25</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">percentile25</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;25%&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-cf9c4be0-bc6b-4853-b404-f8c6d7b0d74a">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>25%</th>
+      <td>1.0</td>
+      <td>99.0</td>
+      <td>62.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.3</td>
+      <td>0.24375</td>
+      <td>24.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cf9c4be0-bc6b-4853-b404-f8c6d7b0d74a')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-cf9c4be0-bc6b-4853-b404-f8c6d7b0d74a button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-cf9c4be0-bc6b-4853-b404-f8c6d7b0d74a');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile50</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">percentile50</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-86802afe-7a86-4632-b190-6902ad1e62fe">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>50%</th>
+      <td>3.0</td>
+      <td>117.0</td>
+      <td>72.0</td>
+      <td>23.0</td>
+      <td>30.5</td>
+      <td>32.0</td>
+      <td>0.3725</td>
+      <td>29.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-86802afe-7a86-4632-b190-6902ad1e62fe')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-86802afe-7a86-4632-b190-6902ad1e62fe button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-86802afe-7a86-4632-b190-6902ad1e62fe');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile75</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">percentile75</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;75%&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-cf3d1f8a-05a5-4a1e-b349-ba948c458e79">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>75%</th>
+      <td>6.0</td>
+      <td>140.25</td>
+      <td>80.0</td>
+      <td>32.0</td>
+      <td>127.25</td>
+      <td>36.6</td>
+      <td>0.62625</td>
+      <td>41.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cf3d1f8a-05a5-4a1e-b349-ba948c458e79')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-cf3d1f8a-05a5-4a1e-b349-ba948c458e79 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-cf3d1f8a-05a5-4a1e-b349-ba948c458e79');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Nilai Maksimum</strong></p>
+<p>Dilakukan dengan mengurutkan semua data dari yang terkecil ke terbesar,
+Kemudian diambil nilai yang terbesar</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Glucose&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]),</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BloodPressure&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;SkinThickness&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;SkinThickness&#39;</span><span class="p">]),</span><span class="s1">&#39;Insulin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Insulin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]),</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;DiabetesPedigreeFunction&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Outcome&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-91a62f0a-653c-4fd1-a839-d3b802a15e1d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>BloodPressure</th>
+      <th>SkinThickness</th>
+      <th>Insulin</th>
+      <th>BMI</th>
+      <th>DiabetesPedigreeFunction</th>
+      <th>Age</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>max</th>
+      <td>17</td>
+      <td>199</td>
+      <td>122</td>
+      <td>99</td>
+      <td>846</td>
+      <td>67.1</td>
+      <td>2.42</td>
+      <td>81</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-91a62f0a-653c-4fd1-a839-d3b802a15e1d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-91a62f0a-653c-4fd1-a839-d3b802a15e1d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-91a62f0a-653c-4fd1-a839-d3b802a15e1d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1496,7 +2553,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_12_2.png" src="_images/notebooks_12_2.png" />
+<img alt="_images/notebooks_27_2.png" src="_images/notebooks_27_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1516,7 +2573,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Negative Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_13_2.png" src="_images/notebooks_13_2.png" />
+<img alt="_images/notebooks_28_2.png" src="_images/notebooks_28_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1536,7 +2593,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_14_2.png" src="_images/notebooks_14_2.png" />
+<img alt="_images/notebooks_29_2.png" src="_images/notebooks_29_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1558,7 +2615,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_15_2.png" src="_images/notebooks_15_2.png" />
+<img alt="_images/notebooks_30_2.png" src="_images/notebooks_30_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1578,7 +2635,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_16_2.png" src="_images/notebooks_16_2.png" />
+<img alt="_images/notebooks_31_2.png" src="_images/notebooks_31_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1598,7 +2655,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_17_2.png" src="_images/notebooks_17_2.png" />
+<img alt="_images/notebooks_32_2.png" src="_images/notebooks_32_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1618,7 +2675,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_18_2.png" src="_images/notebooks_18_2.png" />
+<img alt="_images/notebooks_33_2.png" src="_images/notebooks_33_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1638,7 +2695,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_19_2.png" src="_images/notebooks_19_2.png" />
+<img alt="_images/notebooks_34_2.png" src="_images/notebooks_34_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1658,7 +2715,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Symmetric Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_20_2.png" src="_images/notebooks_20_2.png" />
+<img alt="_images/notebooks_35_2.png" src="_images/notebooks_35_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1697,16 +2754,14 @@ memory usage: 54.1 KB
   warnings.warn(msg, FutureWarning)
 /usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
   warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_21_3.png" src="_images/notebooks_21_3.png" />
+<img alt="_images/notebooks_36_2.png" src="_images/notebooks_36_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1739,9 +2794,7 @@ memory usage: 54.1 KB
   warnings.warn(msg, FutureWarning)
 /usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
   warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
   warnings.warn(msg, FutureWarning)
 /usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
   warnings.warn(msg, FutureWarning)
@@ -1750,7 +2803,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_22_3.png" src="_images/notebooks_22_3.png" />
+<img alt="_images/notebooks_37_2.png" src="_images/notebooks_37_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1786,7 +2839,7 @@ memory usage: 54.1 KB
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewned&#39;)]
 </pre></div>
 </div>
-<img alt="_images/notebooks_23_2.png" src="_images/notebooks_23_2.png" />
+<img alt="_images/notebooks_38_2.png" src="_images/notebooks_38_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1798,7 +2851,7 @@ memory usage: 54.1 KB
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">28</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
 
@@ -1879,59 +2932,6 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">shell</span>
-jupyter nbconvert --to html /content/drive/MyDrive/datamining/tugas/_build/html/notebooks.ipynb
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[NbConvertApp] Converting notebook /content/drive/MyDrive/datamining/tugas/_build/html/notebooks.ipynb to html
-[NbConvertApp] Writing 640613 bytes to /content/drive/MyDrive/datamining/tugas/_build/html/notebooks.html
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
 </section>
 </section>
 
