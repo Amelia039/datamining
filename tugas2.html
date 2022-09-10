@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="_static/fotoku.png" class="logo" alt="logo">
+      <img src="_static/logoku.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Data Mining</h1>
@@ -364,7 +364,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ae49500d-4b15-4ec9-b2a6-6ddf6f92cd14">
+  <div id="df-4994de37-b82c-4ee2-810b-ae23b6163733">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -484,7 +484,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ae49500d-4b15-4ec9-b2a6-6ddf6f92cd14')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4994de37-b82c-4ee2-810b-ae23b6163733')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -535,12 +535,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ae49500d-4b15-4ec9-b2a6-6ddf6f92cd14 button.colab-df-convert');
+          document.querySelector('#df-4994de37-b82c-4ee2-810b-ae23b6163733 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ae49500d-4b15-4ec9-b2a6-6ddf6f92cd14');
+          const element = document.querySelector('#df-4994de37-b82c-4ee2-810b-ae23b6163733');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -560,6 +560,42 @@ title="Print to PDF"
     </div>
   </div>
 </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Kategori1&quot;</span><span class="p">,</span> <span class="s2">&quot;Kategori2 &quot;</span><span class="p">,</span> <span class="s2">&quot;Kategori3&quot;</span><span class="p">]</span>
+<span class="n">binning</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;petal_length&#39;</span><span class="p">],</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="n">binning</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.967, 4.933]    54
+(0.994, 2.967]    50
+(4.933, 6.9]      46
+Name: petal_length, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Kategori1&quot;</span><span class="p">,</span> <span class="s2">&quot;Kategori2 &quot;</span><span class="p">,</span> <span class="s2">&quot;Kategori3&quot;</span><span class="p">]</span>
+<span class="n">binning</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;petal_length&#39;</span><span class="p">],</span><span class="mi">3</span><span class="p">,</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="n">binning</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kategori2     54
+Kategori1     50
+Kategori3     46
+Name: petal_length, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
