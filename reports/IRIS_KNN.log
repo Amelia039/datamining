@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+plt.figure(figsize=(15,10))    
+plt.subplot(2,2,1)    
+sns.boxplot(x='c',y='sepallength',data=c)    
+plt.subplot(2,2,2)    
+sns.boxplot(x='iris',y='sepalwidth',data=c)    
+plt.subplot(2,2,3)    
+sns.boxplot(x='iris',y='petallength',data=c)    
+plt.subplot(2,2,4)    
+sns.boxplot(x='iris',y='petalwidth',data=c) 
+------------------
+
+[0;31m[0m
+[0;31mValueError[0mTraceback (most recent call last)
+[0;32m<ipython-input-3-27a092e6b5b3>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mplt[0m[0;34m.[0m[0mfigure[0m[0;34m([0m[0mfigsize[0m[0;34m=[0m[0;34m([0m[0;36m15[0m[0;34m,[0m[0;36m10[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0mplt[0m[0;34m.[0m[0msubplot[0m[0;34m([0m[0;36m2[0m[0;34m,[0m[0;36m2[0m[0;34m,[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0msns[0m[0;34m.[0m[0mboxplot[0m[0;34m([0m[0mx[0m[0;34m=[0m[0;34m'c'[0m[0;34m,[0m[0my[0m[0;34m=[0m[0;34m'sepallength'[0m[0;34m,[0m[0mdata[0m[0;34m=[0m[0mc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0mplt[0m[0;34m.[0m[0msubplot[0m[0;34m([0m[0;36m2[0m[0;34m,[0m[0;36m2[0m[0;34m,[0m[0;36m2[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0msns[0m[0;34m.[0m[0mboxplot[0m[0;34m([0m[0mx[0m[0;34m=[0m[0;34m'iris'[0m[0;34m,[0m[0my[0m[0;34m=[0m[0;34m'sepalwidth'[0m[0;34m,[0m[0mdata[0m[0;34m=[0m[0mc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/seaborn/_decorators.py[0m in [0;36minner_f[0;34m(*args, **kwargs)[0m
+[1;32m     44[0m             )
+[1;32m     45[0m         [0mkwargs[0m[0;34m.[0m[0mupdate[0m[0;34m([0m[0;34m{[0m[0mk[0m[0;34m:[0m [0marg[0m [0;32mfor[0m [0mk[0m[0;34m,[0m [0marg[0m [0;32min[0m [0mzip[0m[0;34m([0m[0msig[0m[0;34m.[0m[0mparameters[0m[0;34m,[0m [0margs[0m[0;34m)[0m[0;34m}[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 46[0;31m         [0;32mreturn[0m [0mf[0m[0;34m([0m[0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     47[0m     [0;32mreturn[0m [0minner_f[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     48[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/seaborn/categorical.py[0m in [0;36mboxplot[0;34m(x, y, hue, data, order, hue_order, orient, color, palette, saturation, width, dodge, fliersize, linewidth, whis, ax, **kwargs)[0m
+[1;32m   2243[0m     plotter = _BoxPlotter(x, y, hue, data, order, hue_order,
+[1;32m   2244[0m                           [0morient[0m[0;34m,[0m [0mcolor[0m[0;34m,[0m [0mpalette[0m[0;34m,[0m [0msaturation[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2245[0;31m                           width, dodge, fliersize, linewidth)
+[0m[1;32m   2246[0m [0;34m[0m[0m
+[1;32m   2247[0m     [0;32mif[0m [0max[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/seaborn/categorical.py[0m in [0;36m__init__[0;34m(self, x, y, hue, data, order, hue_order, orient, color, palette, saturation, width, dodge, fliersize, linewidth)[0m
+[1;32m    404[0m                  width, dodge, fliersize, linewidth):
+[1;32m    405[0m [0;34m[0m[0m
+[0;32m--> 406[0;31m         [0mself[0m[0;34m.[0m[0mestablish_variables[0m[0;34m([0m[0mx[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mhue[0m[0;34m,[0m [0mdata[0m[0;34m,[0m [0morient[0m[0;34m,[0m [0morder[0m[0;34m,[0m [0mhue_order[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    407[0m         [0mself[0m[0;34m.[0m[0mestablish_colors[0m[0;34m([0m[0mcolor[0m[0;34m,[0m [0mpalette[0m[0;34m,[0m [0msaturation[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    408[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/seaborn/categorical.py[0m in [0;36mestablish_variables[0;34m(self, x, y, hue, data, orient, order, hue_order, units)[0m
+[1;32m    151[0m                 [0;32mif[0m [0misinstance[0m[0;34m([0m[0mvar[0m[0;34m,[0m [0mstr[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    152[0m                     [0merr[0m [0;34m=[0m [0;34m"Could not interpret input '{}'"[0m[0;34m.[0m[0mformat[0m[0;34m([0m[0mvar[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 153[0;31m                     [0;32mraise[0m [0mValueError[0m[0;34m([0m[0merr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    154[0m [0;34m[0m[0m
+[1;32m    155[0m             [0;31m# Figure out the plotting orientation[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mValueError[0m: Could not interpret input 'c'
+ValueError: Could not interpret input 'c'
+
