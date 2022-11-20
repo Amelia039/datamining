@@ -1,0 +1,200 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import pandas as pd
+import streamlit as st
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+import plotly.graph_objects as go
+import plotly.express as px
+from tensorflow import keras
+
+# Read data
+@st.cache
+def load_data():
+    return pd.read_csv('https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv')
+df = load_data()
+------------------
+
+[0;31m[0m
+[0;31mAttributeError[0mTraceback (most recent call last)
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36mto_bytes[0;34m(self, obj, context)[0m
+[1;32m    360[0m             [0;31m# Hash the input[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 361[0;31m             [0mb[0m [0;34m=[0m [0;34mb"%s:%s"[0m [0;34m%[0m [0;34m([0m[0mtname[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_to_bytes[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mcontext[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    362[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36m_to_bytes[0;34m(self, obj, context)[0m
+[1;32m    626[0m             [0;32massert[0m [0mcode[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 627[0;31m             [0;32mif[0m [0mself[0m[0;34m.[0m[0m_file_should_be_hashed[0m[0;34m([0m[0mcode[0m[0;34m.[0m[0mco_filename[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    628[0m                 [0mcontext[0m [0;34m=[0m [0m_get_context[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36m_file_should_be_hashed[0;34m(self, filename)[0m
+[1;32m    402[0m         return file_util.file_is_in_folder_glob(
+[0;32m--> 403[0;31m             [0mfilepath[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_get_main_script_directory[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    404[0m         ) or file_util.file_in_pythonpath(filepath)
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36m_get_main_script_directory[0;34m()[0m
+[1;32m    714[0m         [0;31m# script path in ScriptRunner.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 715[0;31m         [0mabs_main_path[0m [0;34m=[0m [0mpathlib[0m[0;34m.[0m[0mPath[0m[0;34m([0m[0m__main__[0m[0;34m.[0m[0m__file__[0m[0;34m)[0m[0;34m.[0m[0mresolve[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    716[0m         [0;32mreturn[0m [0mstr[0m[0;34m([0m[0mabs_main_path[0m[0;34m.[0m[0mparent[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mAttributeError[0m: module '__main__' has no attribute '__file__'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mInternalHashError[0mTraceback (most recent call last)
+[0;32m<ipython-input-2-270defc68e58>[0m in [0;36m<module>[0;34m[0m
+[1;32m     14[0m [0;32mdef[0m [0mload_data[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     15[0m     [0;32mreturn[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m'https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 16[0;31m [0mdf[0m [0;34m=[0m [0mload_data[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/caching.py[0m in [0;36mwrapped_func[0;34m(*args, **kwargs)[0m
+[1;32m    621[0m         [0;32mif[0m [0mshow_spinner[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    622[0m             [0;32mwith[0m [0mspinner[0m[0;34m([0m[0mmessage[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 623[0;31m                 [0;32mreturn[0m [0mget_or_create_cached_value[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    624[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    625[0m             [0;32mreturn[0m [0mget_or_create_cached_value[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/caching.py[0m in [0;36mget_or_create_cached_value[0;34m()[0m
+[1;32m    546[0m                 [0;31m# If we generated the key earlier we would only hash those[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    547[0m                 [0;31m# globals by name, and miss changes in their code or value.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 548[0;31m                 [0mcache_key[0m [0;34m=[0m [0m_hash_func[0m[0;34m([0m[0mnon_optional_func[0m[0;34m,[0m [0mhash_funcs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    549[0m [0;34m[0m[0m
+[1;32m    550[0m             [0;31m# First, get the cache that's attached to this function.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/caching.py[0m in [0;36m_hash_func[0;34m(func, hash_funcs)[0m
+[1;32m    677[0m         [0mhash_funcs[0m[0;34m=[0m[0mhash_funcs[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    678[0m         [0mhash_reason[0m[0;34m=[0m[0mHashReason[0m[0;34m.[0m[0mCACHING_FUNC_BODY[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 679[0;31m         [0mhash_source[0m[0;34m=[0m[0mfunc[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    680[0m     )
+[1;32m    681[0m     [0mcache_key[0m [0;34m=[0m [0mfunc_hasher[0m[0;34m.[0m[0mhexdigest[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36mupdate_hash[0;34m(val, hasher, hash_reason, hash_source, context, hash_funcs)[0m
+[1;32m    107[0m [0;34m[0m[0m
+[1;32m    108[0m     [0mch[0m [0;34m=[0m [0m_CodeHasher[0m[0;34m([0m[0mhash_funcs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 109[0;31m     [0mch[0m[0;34m.[0m[0mupdate[0m[0;34m([0m[0mhasher[0m[0;34m,[0m [0mval[0m[0;34m,[0m [0mcontext[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    110[0m [0;34m[0m[0m
+[1;32m    111[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36mupdate[0;34m(self, hasher, obj, context)[0m
+[1;32m    384[0m     [0;32mdef[0m [0mupdate[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mhasher[0m[0;34m,[0m [0mobj[0m[0;34m:[0m [0mAny[0m[0;34m,[0m [0mcontext[0m[0;34m:[0m [0mOptional[0m[0;34m[[0m[0mContext[0m[0;34m][0m [0;34m=[0m [0;32mNone[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    385[0m         [0;34m"""Update the provided hasher with the hash of an object."""[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 386[0;31m         [0mb[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mto_bytes[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mcontext[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    387[0m         [0mhasher[0m[0;34m.[0m[0mupdate[0m[0;34m([0m[0mb[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    388[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36mto_bytes[0;34m(self, obj, context)[0m
+[1;32m    373[0m [0;34m[0m[0m
+[1;32m    374[0m         [0;32mexcept[0m [0mBaseException[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 375[0;31m             [0;32mraise[0m [0mInternalHashError[0m[0;34m([0m[0me[0m[0;34m,[0m [0mobj[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    376[0m [0;34m[0m[0m
+[1;32m    377[0m         [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36mto_bytes[0;34m(self, obj, context)[0m
+[1;32m    359[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    360[0m             [0;31m# Hash the input[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 361[0;31m             [0mb[0m [0;34m=[0m [0;34mb"%s:%s"[0m [0;34m%[0m [0;34m([0m[0mtname[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_to_bytes[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mcontext[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    362[0m [0;34m[0m[0m
+[1;32m    363[0m             [0;31m# Hmmm... It's possible that the size calculation is wrong. When we[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36m_to_bytes[0;34m(self, obj, context)[0m
+[1;32m    625[0m             [0mcode[0m [0;34m=[0m [0mgetattr[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0;34m"__code__"[0m[0;34m,[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    626[0m             [0;32massert[0m [0mcode[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 627[0;31m             [0;32mif[0m [0mself[0m[0;34m.[0m[0m_file_should_be_hashed[0m[0;34m([0m[0mcode[0m[0;34m.[0m[0mco_filename[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    628[0m                 [0mcontext[0m [0;34m=[0m [0m_get_context[0m[0;34m([0m[0mobj[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    629[0m                 [0mdefaults[0m [0;34m=[0m [0mgetattr[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0;34m"__defaults__"[0m[0;34m,[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36m_file_should_be_hashed[0;34m(self, filename)[0m
+[1;32m    401[0m             [0;32mreturn[0m [0;32mFalse[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    402[0m         return file_util.file_is_in_folder_glob(
+[0;32m--> 403[0;31m             [0mfilepath[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_get_main_script_directory[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    404[0m         ) or file_util.file_in_pythonpath(filepath)
+[1;32m    405[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/runtime/legacy_caching/hashing.py[0m in [0;36m_get_main_script_directory[0;34m()[0m
+[1;32m    713[0m         [0;31m# This works because we set __main__.__file__ to the[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    714[0m         [0;31m# script path in ScriptRunner.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 715[0;31m         [0mabs_main_path[0m [0;34m=[0m [0mpathlib[0m[0;34m.[0m[0mPath[0m[0;34m([0m[0m__main__[0m[0;34m.[0m[0m__file__[0m[0;34m)[0m[0;34m.[0m[0mresolve[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    716[0m         [0;32mreturn[0m [0mstr[0m[0;34m([0m[0mabs_main_path[0m[0;34m.[0m[0mparent[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    717[0m [0;34m[0m[0m
+
+[0;31mInternalHashError[0m: module '__main__' has no attribute '__file__'
+
+While caching the body of `load_data()`, Streamlit encountered an
+object of type `builtins.function`, which it does not know how to hash.
+
+**In this specific case, it's very likely you found a Streamlit bug so please
+[file a bug report here.]
+(https://github.com/streamlit/streamlit/issues/new/choose)**
+
+In the meantime, you can try bypassing this error by registering a custom
+hash function via the `hash_funcs` keyword in @st.cache(). For example:
+
+```
+@st.cache(hash_funcs={builtins.function: my_hash_func})
+def my_func(...):
+    ...
+```
+
+If you don't know where the object of type `builtins.function` is coming
+from, try looking at the hash chain below for an object that you do recognize,
+then pass that to `hash_funcs` instead:
+
+```
+Object of type builtins.function: <function load_data at 0x7f8b9252fb00>
+```
+
+Please see the `hash_funcs` [documentation]
+(https://docs.streamlit.io/library/advanced-features/caching#the-hash_funcs-parameter)
+for more details.
+            
+InternalHashError: module '__main__' has no attribute '__file__'
+
+While caching the body of `load_data()`, Streamlit encountered an
+object of type `builtins.function`, which it does not know how to hash.
+
+**In this specific case, it's very likely you found a Streamlit bug so please
+[file a bug report here.]
+(https://github.com/streamlit/streamlit/issues/new/choose)**
+
+In the meantime, you can try bypassing this error by registering a custom
+hash function via the `hash_funcs` keyword in @st.cache(). For example:
+
+```
+@st.cache(hash_funcs={builtins.function: my_hash_func})
+def my_func(...):
+    ...
+```
+
+If you don't know where the object of type `builtins.function` is coming
+from, try looking at the hash chain below for an object that you do recognize,
+then pass that to `hash_funcs` instead:
+
+```
+Object of type builtins.function: <function load_data at 0x7f8b9252fb00>
+```
+
+Please see the `hash_funcs` [documentation]
+(https://docs.streamlit.io/library/advanced-features/caching#the-hash_funcs-parameter)
+for more details.
+            
+

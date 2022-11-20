@@ -1,0 +1,82 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import pandas as pd
+import streamlit as st
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+import plotly.graph_objects as go
+import plotly.express as px
+from tensorflow import keras
+
+# Read data
+@st.cache
+def load_data():
+    return pd.read_csv('https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv')
+df = load_data()
+------------------
+
+[0;31m[0m
+[0;31mAttributeError[0mTraceback (most recent call last)
+[0;32m<ipython-input-2-270defc68e58>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0;32mimport[0m [0mstreamlit[0m [0;32mas[0m [0mst[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mdecomposition[0m [0;32mimport[0m [0mPCA[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mmodel_selection[0m [0;32mimport[0m [0mtrain_test_split[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     53[0m [0m__version__[0m [0;34m=[0m [0m_STREAMLIT_VERSION_STRING[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     54[0m [0;34m[0m[0m
+[0;32m---> 55[0;31m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0mdelta_generator[0m [0;32mimport[0m [0mDeltaGenerator[0m [0;32mas[0m [0m_DeltaGenerator[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     56[0m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0mproto[0m[0;34m.[0m[0mRootContainer_pb2[0m [0;32mimport[0m [0mRootContainer[0m [0;32mas[0m [0m_RootContainer[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     57[0m from streamlit.runtime.caching import (
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/delta_generator.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     43[0m [0;31m# We select between them with the DataFrameElementSelectorMixin.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     44[0m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0melements[0m[0;34m.[0m[0marrow[0m [0;32mimport[0m [0mArrowMixin[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 45[0;31m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0melements[0m[0;34m.[0m[0marrow_altair[0m [0;32mimport[0m [0mArrowAltairMixin[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     46[0m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0melements[0m[0;34m.[0m[0marrow_vega_lite[0m [0;32mimport[0m [0mArrowVegaLiteMixin[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     47[0m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0melements[0m[0;34m.[0m[0mballoons[0m [0;32mimport[0m [0mBalloonsMixin[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/elements/arrow_altair.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     40[0m [0;32mfrom[0m [0mstreamlit[0m [0;32mimport[0m [0mtype_util[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     41[0m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0melements[0m[0;34m.[0m[0marrow[0m [0;32mimport[0m [0mData[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 42[0;31m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0melements[0m[0;34m.[0m[0mutils[0m [0;32mimport[0m [0mlast_index_for_melted_dataframes[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     43[0m [0;32mfrom[0m [0mstreamlit[0m[0;34m.[0m[0merrors[0m [0;32mimport[0m [0mStreamlitAPIException[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     44[0m from streamlit.proto.ArrowVegaLiteChart_pb2 import (
+
+[0;32m/usr/local/lib/python3.7/dist-packages/streamlit/elements/utils.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     80[0m def get_label_visibility_proto_value(
+[1;32m     81[0m     [0mlabel_visibility_string[0m[0;34m:[0m [0mtype_util[0m[0;34m.[0m[0mLabelVisibility[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 82[0;31m ) -> LabelVisibilityMessage.LabelVisibilityOptions.ValueType:
+[0m[1;32m     83[0m     [0;34m"""Returns one of LabelVisibilityMessage enum constants based on string value."""[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     84[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/google/protobuf/internal/enum_type_wrapper.py[0m in [0;36m__getattr__[0;34m(self, name)[0m
+[1;32m    113[0m       [0;32mpass[0m  [0;31m# fall out to break exception chaining[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    114[0m     raise AttributeError('Enum {} has no value defined for name {!r}'.format(
+[0;32m--> 115[0;31m         self._enum_type.name, name))
+[0m
+[0;31mAttributeError[0m: Enum LabelVisibilityOptions has no value defined for name 'ValueType'
+AttributeError: Enum LabelVisibilityOptions has no value defined for name 'ValueType'
+
