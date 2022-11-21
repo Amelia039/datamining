@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="decission_tree.html" />
+    <link rel="prev" title="Iris with Naive Bayes" href="naivebayes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
    Statistik Deskriptif
@@ -120,6 +122,36 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="tugas2.html">
    Diskritisasi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IRIS_KNN.html">
+   IRIS K-Nearest Neiighbor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naivebayes.html">
+   Iris with Naive Bayes
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   IRIS With K-Means
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UTS.html">
+   UTS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diabetes.html">
+   Diabetic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regressionlinear.html">
+   Regression Linear
   </a>
  </li>
 </ul>
@@ -353,7 +385,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-dd3e3bd8-0ab9-43d0-8775-0359c41b5416">
+  <div id="df-d1bb187a-c54f-4878-8ccc-248838482f64">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -473,7 +505,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-dd3e3bd8-0ab9-43d0-8775-0359c41b5416')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d1bb187a-c54f-4878-8ccc-248838482f64')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -524,12 +556,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-dd3e3bd8-0ab9-43d0-8775-0359c41b5416 button.colab-df-convert');
+          document.querySelector('#df-d1bb187a-c54f-4878-8ccc-248838482f64 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-dd3e3bd8-0ab9-43d0-8775-0359c41b5416');
+          const element = document.querySelector('#df-d1bb187a-c54f-4878-8ccc-248838482f64');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -635,13 +667,13 @@ Categories (3, object): [&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2,
-       2, 2, 2, 0, 0, 2, 2, 2, 2, 0, 2, 0, 2, 0, 2, 2, 0, 0, 2, 2, 2, 2,
-       2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 0], dtype=int32)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2,
+       2, 2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 2, 2,
+       2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1], dtype=int32)
 </pre></div>
 </div>
 </div>
@@ -653,8 +685,8 @@ Categories (3, object): [&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.9016129 , 2.7483871 , 4.39354839, 1.43387097],
-       [5.006     , 3.418     , 1.464     , 0.244     ],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.006     , 3.418     , 1.464     , 0.244     ],
+       [5.9016129 , 2.7483871 , 4.39354839, 1.43387097],
        [6.85      , 3.07368421, 5.74210526, 2.07105263]])
 </pre></div>
 </div>
@@ -676,7 +708,7 @@ Categories (3, object): [&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8b656e4b10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fdb48486690&gt;
 </pre></div>
 </div>
 <img alt="_images/kmeans_9_1.png" src="_images/kmeans_9_1.png" />
@@ -695,13 +727,13 @@ Categories (3, object): [&#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 precision    recall  f1-score   support
 
-    Iris-setosa       0.00      0.00      0.00        50
-Iris-versicolor       0.00      0.00      0.00        50
+    Iris-setosa       1.00      1.00      1.00        50
+Iris-versicolor       0.77      0.96      0.86        50
  Iris-virginica       0.95      0.72      0.82        50
 
-       accuracy                           0.24       150
-      macro avg       0.32      0.24      0.27       150
-   weighted avg       0.32      0.24      0.27       150
+       accuracy                           0.89       150
+      macro avg       0.91      0.89      0.89       150
+   weighted avg       0.91      0.89      0.89       150
 </pre></div>
 </div>
 </div>
@@ -735,6 +767,20 @@ Iris-versicolor       0.00      0.00      0.00        50
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="naivebayes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Iris with Naive Bayes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="decission_tree.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
