@@ -17,14 +17,17 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-X
+eqfrequency_sepal_length = pd.qcut(c['sepal_length'],3,labels=labelsforlength).value_counts()
+eqfrequency_sepal_length 
+
 ------------------
 
 [0;31m[0m
 [0;31mNameError[0mTraceback (most recent call last)
-[0;32m<ipython-input-2-b5fec669aca1>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mX[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mNameError[0m: name 'X' is not defined
-NameError: name 'X' is not defined
+[0;32m<ipython-input-16-5275a9910798>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0meqfrequency_sepal_length[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mqcut[0m[0;34m([0m[0mc[0m[0;34m[[0m[0;34m'sepal_length'[0m[0;34m][0m[0;34m,[0m[0;36m3[0m[0;34m,[0m[0mlabels[0m[0;34m=[0m[0mlabelsforlength[0m[0;34m)[0m[0;34m.[0m[0mvalue_counts[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0meqfrequency_sepal_length[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'labelsforlength' is not defined
+NameError: name 'labelsforlength' is not defined
 
