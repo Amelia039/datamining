@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Iriswith Naive Bayes &#8212; Data Mining</title>
+    <title>Iris with Naive Bayes &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="kmeans.html" />
+    <link rel="next" title="IRIS With K-Means" href="kmeans.html" />
     <link rel="prev" title="IRIS K-Nearest Neiighbor" href="IRIS_KNN.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -121,7 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas2.html">
-   Pengertian Diskritisasi
+   Diskritisasi
   </a>
  </li>
  <li class="toctree-l1">
@@ -131,7 +131,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Iriswith Naive Bayes
+   Iris with Naive Bayes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kmeans.html">
+   IRIS With K-Means
   </a>
  </li>
  <li class="toctree-l1">
@@ -345,7 +350,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Iriswith Naive Bayes</h1>
+                <h1>Iris with Naive Bayes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -357,8 +362,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="iriswith-naive-bayes">
-<h1>Iriswith Naive Bayes<a class="headerlink" href="#iriswith-naive-bayes" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="iris-with-naive-bayes">
+<h1>Iris with Naive Bayes<a class="headerlink" href="#iris-with-naive-bayes" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
@@ -377,7 +382,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-54ebd279-7715-4b34-a557-1e0f8edde063">
+  <div id="df-82d27b4c-9cc9-4fee-be4f-ea27876f50e4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -497,7 +502,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-54ebd279-7715-4b34-a557-1e0f8edde063')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-82d27b4c-9cc9-4fee-be4f-ea27876f50e4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -548,12 +553,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-54ebd279-7715-4b34-a557-1e0f8edde063 button.colab-df-convert');
+          document.querySelector('#df-82d27b4c-9cc9-4fee-be4f-ea27876f50e4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-54ebd279-7715-4b34-a557-1e0f8edde063');
+          const element = document.querySelector('#df-82d27b4c-9cc9-4fee-be4f-ea27876f50e4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -783,15 +788,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;,
-       &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;,
-       &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;,
-       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;,
+       &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;,
+       &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;, &#39;Iris-virginica&#39;,
+       &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;,
+       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;,
+       &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;,
        &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;,
-       &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-virginica&#39;,
-       &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;,
-       &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;, &#39;Iris-setosa&#39;,
-       &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;], dtype=&#39;&lt;U15&#39;)
+       &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;,
+       &#39;Iris-versicolor&#39;], dtype=&#39;&lt;U15&#39;)
 </pre></div>
 </div>
 </div>
@@ -807,12 +812,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy :  0.9666666666666667
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy :  0.8666666666666667
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[13,  0,  0],
-       [ 0, 11,  0],
-       [ 0,  1,  5]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[10,  0,  0],
+       [ 0,  7,  2],
+       [ 0,  2,  9]])
 </pre></div>
 </div>
 </div>
@@ -826,7 +831,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-39892680-ca65-4676-9d77-3c7720bfb898">
+  <div id="df-3d45f38f-9371-43e6-be3a-a4eb3ac936fa">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -863,23 +868,23 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>2</th>
-      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Iris-virginica</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>6</th>
@@ -893,18 +898,18 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>8</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>11</th>
@@ -913,13 +918,13 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>12</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>14</th>
@@ -928,13 +933,13 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>15</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>17</th>
@@ -943,28 +948,28 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>18</th>
-      <td>Iris-versicolor</td>
-      <td>Iris-versicolor</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-setosa</td>
+      <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>23</th>
@@ -973,13 +978,13 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>24</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>26</th>
@@ -988,8 +993,8 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>27</th>
-      <td>Iris-setosa</td>
-      <td>Iris-setosa</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>28</th>
@@ -998,13 +1003,13 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>29</th>
-      <td>Iris-virginica</td>
-      <td>Iris-virginica</td>
+      <td>Iris-versicolor</td>
+      <td>Iris-versicolor</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-39892680-ca65-4676-9d77-3c7720bfb898')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3d45f38f-9371-43e6-be3a-a4eb3ac936fa')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1055,12 +1060,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-39892680-ca65-4676-9d77-3c7720bfb898 button.colab-df-convert');
+          document.querySelector('#df-3d45f38f-9371-43e6-be3a-a4eb3ac936fa button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-39892680-ca65-4676-9d77-3c7720bfb898');
+          const element = document.querySelector('#df-3d45f38f-9371-43e6-be3a-a4eb3ac936fa');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1120,7 +1125,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="kmeans.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">IRIS With K-Means</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
