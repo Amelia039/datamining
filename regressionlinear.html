@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Data Mining</title>
+    <title>Regression Linear &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -112,45 +112,40 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Statistik Deskriptif
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas2.html">
+   Pengertian Diskritisasi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IRIS_KNN.html">
+   IRIS K-Nearest Neiighbor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naivebayes.html">
+   Iriswith Naive Bayes
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="UTS.html">
    UTS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Tugas 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tugas2.html">
-   Tugas 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="IRIS_KNN.html">
-   TUGAS 3 K-NN
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="naivebayes.html">
-   Tugas 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="kmeans.html">
-   Tugas 5
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="decission_tree.html">
-   Tugas 6
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="diabetics.html">
    Diabetic
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Regression Linear
   </a>
  </li>
 </ul>
@@ -337,50 +332,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Regression Linear</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -388,7 +356,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="regression-linear">
+<h1>Regression Linear<a class="headerlink" href="#regression-linear" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
@@ -399,7 +369,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/regressionlinear_0_0.png" src="_images/regressionlinear_0_0.png" />
+<img alt="_images/regressionlinear_1_0.png" src="_images/regressionlinear_1_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -432,7 +402,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/regressionlinear_2_0.png" src="_images/regressionlinear_2_0.png" />
+<img alt="_images/regressionlinear_3_0.png" src="_images/regressionlinear_3_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -454,7 +424,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/regressionlinear_4_0.png" src="_images/regressionlinear_4_0.png" />
+<img alt="_images/regressionlinear_5_0.png" src="_images/regressionlinear_5_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1105,6 +1075,7 @@ title="Print to PDF"
 </div></div>
 </div>
 <p>##Evaluasi model</p>
+</section>
 
     <script type="text/x-thebe-config">
     {
